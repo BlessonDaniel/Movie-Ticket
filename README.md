@@ -9,7 +9,7 @@ Run
 in Background
 
 Mongo Server will be running at 
-# localhost://27017/
+# localhost://27017
 
 Then run the following command in order to add Screen details
 # node initDb
