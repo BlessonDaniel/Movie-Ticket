@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body
+        {
+            text-align: center;
+            background-color: aqua;
+        }
+        .box{
+            display: inline-flex;
+        }
+        .box div{
+            padding: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Home Page</h1>
+    <p><%= messages%></p><br><br>
+    <h2>Currently Showing Movies</h2><br><br>
+    <div class="box">
+    <div>
+            <img src="https://images.cinemaexpress.com/uploads/user/imagelibrary/2020/7/28/original/karnan.jpg" alt="karnan" height="300px" width="250px"><br><br>
+            <h2>Screen A</h2>
+    </div>
+    <div>
+        <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT548VxmAy8QLFh56tfBTUqGg0qqU75AxX-dQ0dCP0W-fmdoDuk" alt="Soorarai Potru" height="300px" width="250px"><br><br>
+        <h2>Screen B</h2>
+</div>
+<div>
+    <img src="https://lumiere-a.akamaihd.net/v1/images/p_thenewmutants_19999_9ae6e819.jpeg" alt="The Mutants" height="300px" width="250px"><br><br>
+    <h2>Screen C</h2>
+</div>
+<div>
+    <img src="https://lumiere-a.akamaihd.net/v1/images/ford_v_ferrari_mainmenu_1600x686_5b773f80.jpeg?region=0,0,1600,686&width=960" alt="Ford vs Ferrari" height="300px" width="250px"><br><br>
+    <h2>Screen D</h2>
+</div><br><br>
+</div>
+<form action="/" method="POST">
+    <div>
+        <label for="sel">Select your Movie : </label>
+        <select id= "sel" name="screen">
+            <option value="Screen A">karnan</option>
+            <option value="Screen B">Soorarai Potru</option>
+            <option value="Screen C">The mutants</option>
+            <option value="Screen D">Ford V Ferrari</option>
+        </select><br><br>
+        <label for="seats">No of Seats : </label>
+        <input type="number" name="seats" id="seats" min="1" value="1" max="4">
+    </div><br>
+    <input type="submit" value="Book"><br><br>
+</form>
+    <form action="/logout" method="POST">
+        <button>Sign Out</button>
+    </form>
+</body>
+</html>
